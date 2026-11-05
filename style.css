@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body header {
+    position:sticky;
+    top: 0;
+    padding: 15px 40px;;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fca5a5;
+    border-bottom: 3px #6b6b69;
+}
+
+div {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
