@@ -1,4 +1,4 @@
- サイト名　**Tamruabakary**
+ サイト名　**Tamurabakary**
  リポジトリ名　**bakarykom**
  見た目参考　https://www.fukudapan.com/
 
