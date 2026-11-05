@@ -2,3 +2,32 @@
 body{
     background-color: #FFF;
 }
+
+header{    
+    position:sticky;
+    top: 0;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FCA5A5;
+    border-bottom: 3px #6B6B69;
+}
+
+.main-title{
+    text-align: center;
+}
+
+.main-title p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container{
+    margin: 60px;
+    text-align: left;
+}
+
+.container h3{
+    font-size: 28px;
+}
