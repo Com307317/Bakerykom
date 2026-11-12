@@ -19,26 +19,100 @@ img {
 
 /* -------------ヘッダーの設定----------------- */
 header {
-    position: sticky;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
-}
-header a{
-    text-align: center;
-    padding: 15px 30px;
-    border-top:1px solid black ;
-    transition: all 0.2s ease;
-    font-weight: bold;
-    
+    padding: 20px 40px;
 }
 
+.menu1 {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px;                      
+    max-width: 1000px;             
+    margin: 0 auto;                 
+}
+
+.menu1 a {
+    flex: 1;                        
+    text-align: center;             
+    text-decoration: none;          
+    color: #8b4513;                 
+    font-weight: bold;              
+    font-size: 16px;
+    padding-top: 15px;              
+}
+
+
+/* --------------body------------------- */
 .thema{
     text-align: center;
     margin: 80px auto;
     padding: 0 20px;
     background-color: white;
+    text-size-adjust: 2rm;
+}
+
+
+#Top .outline {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+#Top .outline-content{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#Top .outline-text{
+    flex: 1;
+}
+#Top .outline-text h2{
+    margin-top: 0;
+    margin-bottom:24px ;
+}
+#Top .outline-text p{
+    line-height: 2;
+    margin: 0;
+}
+#Top .outline-content img{
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ----------------------------------------access--------------------------------------------------------- */
+#Top .access {
+    display: flex;
+}
+
+#Top .access .map {
+    flex: 1;
+}
+/* -------------------マップを画面いっぱいに広げる設定ここから下--------------------------- */
+#Top .access .map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px; }
+
+#Top .access .info {
+    flex: 1;
+    background-color: #FFC;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Top .access .info h2{
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#Top .access .info p {
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.6;
 }
 
 /* ----------------------------------------スライダーの設定------------------------------------------------ */
@@ -77,7 +151,7 @@ header a{
     cursor: pointer;
     font-size: 18px;
     border-radius: 4px;
-    z-index: 10;
+    z-Top: 10;
 }
 
 .prev { left: 10px; }
