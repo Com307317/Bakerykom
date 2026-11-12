@@ -12,12 +12,16 @@
 <body id="Top">
     <section class="Top">
         <div class="slider">
-            <img src="picture/フランスぱん.jpg" alt="pan1">
-            <img src="picture/カレー.jpg" alt="pan2">
-            <img src="picture/わっさん.jpg" alt="pna3">
+            <div class="slides">
+            <img src="picture/フランスぱん.jpg" alt="pan1" class="slide active">
+            <img src="picture/カレー.jpg" alt="pan2" class="slide">
+            <img src="picture/わっさん.jpg" alt="pan3" class="slide">
         </div>
-        <h2>今までにないパンを世界へ</h2>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
     </section>
+        <h1 class="thema">今までにないパンを世界へ</h1>
         
     <section class="outline">
         <h2>進化し続けるおいしさ</h2>
@@ -64,7 +68,44 @@
     </section>
 
 
+<!-- スライダーのスクリプト -->
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    let slideInterval;
 
+    function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    if (index >= slides.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = slides.length - 1;
+    } else {
+        currentIndex = index;
+    }
+    
+    slides[currentIndex].classList.add('active');
+    }
+
+    function changeSlide(step) {
+    showSlide(currentIndex + step);
+    resetTimer();
+    }
+
+    function startTimer() {
+    slideInterval = setInterval(() => {
+        showSlide(currentIndex + 1);
+    }, 4000);
+    }
+
+    function resetTimer() {
+    clearInterval(slideInterval);
+    startTimer();
+    }
+
+    startTimer();
+</script>
 
     
 </body>
