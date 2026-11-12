@@ -1,29 +1,46 @@
 * {
     margin: 0;
-    padding: 0%;
+    padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-color: #faf8f5; 
+    color: #333;
+    font-family: sans-serif;
+}
+
+/* ヘッダー */
 body header {
-    position:sticky;
+    position: sticky;
     top: 0;
-    padding: 15px 40px;;
+    z-index: 100;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #fca5a5;
-    border-bottom: 3px #6b6b69;
+    border-bottom: 3px solid #6b6b69;
 }
 
-div {
+header div {
     display: flex;
-    list-style: none;
     gap: 20px;
+}
+
+header div a {
+    text-decoration: none;
+    color: #8b4513;
+    font-weight: bold;
+}
+
+
+section {
+    position: relative;
 }
 
 section img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     display: block;
 }
@@ -33,37 +50,67 @@ section h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(120, 120, 120, 0.6);
+    background-color: rgba(120, 120, 120, 0.7);
     color: #fff;
     padding: 8px 35px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
-div img {
+/* パンの一覧エリア */
+main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+main div img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+    margin-top: 15px;
+    border-radius: 4px;
 }
 
-div span {
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(120, 120, 120, 0.6);
-    padding: 8px 35px;
+.name {
     font-size: 1.3rem;
     font-weight: bold;
-    border-radius: 2px;
-    color:#eee0a2
+    color: #5a3e2b;
+    margin-bottom: 8px;
 }
 
-footer {
-    background-color: #fca5a5;
+.ex {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
     text-align: center;
-    padding: 15px 0;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #8b4513;
+}
+
+.midashi-footer{
+    padding: 20px 40px;
+    font-size: 40px;
     font-weight: bold;
 }
