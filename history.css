@@ -7,18 +7,24 @@ body {
 }
 
 header {
-    background-color: #f2f2f2;
-    padding: 0 40px;
-    height: 60px; 
-    display: flex;
-    align-items: center;
+    padding: 20px 40px;
 }
 
 .menu1 {
     display: flex;
-    justify-content: space-around; 
-    width: 100%;                
-    white-space: nowrap;          
+    justify-content: space-between; 
+    gap: 20px;                      
+    max-width: 1000px;             
+    margin: 0 auto;                 
+}
+
+.menu1 a {
+    flex: 1;                        
+    text-align: center;             
+    text-decoration: none;          
+    color: #8b4513;                 
+    font-weight: bold;              
+    font-size: 16px;            
 }
 
 main {
