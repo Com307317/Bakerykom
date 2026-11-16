@@ -49,6 +49,7 @@ nav a{
 }
 
 .main-title h1{
+    color: #8b4513;
     margin-top: 30px;
     margin-bottom: 5px;
 }
@@ -67,11 +68,13 @@ nav a{
     display: block;
 }
 
-.container h3{
+.info h3{
+    color: #8b4513;
     font-size: 28px;
     padding: 5px 0 10px 5px;
     margin-top: 30px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .info{
