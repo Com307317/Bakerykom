@@ -52,7 +52,8 @@ nav a{
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    text-align: left;
+    text-align: center;
+    display: block;
 }
 
 .container h3{
@@ -62,12 +63,21 @@ nav a{
     margin-bottom: 20px;
 }
 
+.info{
+    text-align: left;
+    display: inline-block;
+}
+
 img{
     max-width: 100%;
     height: auto;
     border-radius: 5px;
     margin: 15px 0;
     display: block;
+}
+
+.pay{
+    text-align: left;
 }
 
 footer{
