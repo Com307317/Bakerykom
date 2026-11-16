@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+}
+body {
+    margin: 0;
+    padding:0;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* -------------ヘッダーの設定----------------- */
+header {
+    padding: 20px 40px;
+}
+
+.menu1 {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px;                      
+    max-width: 1000px;             
+    margin: 0 auto;                 
+}
+
+.menu1 a {
+    flex: 1;                        
+    text-align: center;             
+    text-decoration: none;          
+    color: #8b4513;                 
+    font-weight: bold;              
+    font-size: 16px;
+    padding-top: 15px;              
+}
+
+
+/* --------------body------------------- */
+.thema{
+    text-align: center;
+    margin: 80px auto;
+    padding: 0 20px;
+    background-color: white;
+    text-size-adjust: 2rm;
+}
+
+
+#Top .outline {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+#Top .outline-content{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#Top .outline-text{
+    flex: 1;
+}
+#Top .outline-text h2{
+    margin-top: 0;
+    margin-bottom:24px ;
+}
+#Top .outline-text p{
+    line-height: 2;
+    margin: 0;
+}
+#Top .outline-content img{
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+
+/* -------------------------------------------ranking----------------------------------------------------------- */
+#Top .ranking {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+#Top .ranking-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#Top .ranking-text {
+    flex: 1;
+}
+
+#Top .ranking-text h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+#Top .ranking-text p {
+    line-height: 2;
+    margin: 0 0 24px 0; 
+}
+
+#Top .ranking-content img {
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+#Top .ranking-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #8b4513; 
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+#Top .ranking-btn:hover {
+    opacity: 0.8;
+}
+/* ---------------------------------------todaysbread----------------------------------------------------- */
+#Top .outline,
+#Top .ranking,
+#Top .todaysbread {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+#Top .outline-content,
+#Top .ranking-content,
+#Top .todaysbread-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+/* ----------------------------------------access--------------------------------------------------------- */
+#Top .access {
+    display: flex;
+}
+
+#Top .access .map {
+    flex: 1;
+}
+/* -------------------マップを画面いっぱいに広げる設定ここから下--------------------------- */
+#Top .access .map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px; }
+
+#Top .access .info {
+    flex: 1;
+    background-color: #FFC;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Top .access .info h2{
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#Top .access .info p {
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
