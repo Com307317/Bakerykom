@@ -1,0 +1,131 @@
+/* ==========================================
+   カラー変数（テーマカラーの設定）
+   ========================================== */
+:root {
+    --primary-color: #8b5a2b; /* メインカラー（暖かみのあるブラウン） */
+    --bg-color: #fdfbf7;      /* 全体の背景色（やわらかい生成り色） */
+    --card-bg: #ffffff;       /* ランキングカードの背景色（白） */
+    --text-color: #4a3b32;    /* 基本の文字色 */
+    --accent-color: #d97724;  /* アクセントカラー（オレンジ系） */
+}
+
+/* ==========================================
+   全体・ボディのスタイル
+   ========================================== */
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   ヘッダー（ページ上部）
+   ========================================== */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 下部にうっすら影を付ける */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em; /* 文字間隔を広げておしゃれに */
+}
+
+/* ==========================================
+   メインエリア・レイアウト
+   ========================================== */
+main {
+    max-width: 800px; /* コンテンツの最大幅を指定して見やすくする */
+    margin: 2rem auto; /* 中央寄せ */
+    padding: 0 1rem;
+}
+
+/* 各ランキング項目を縦に並べるコンテナ */
+.ranking-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* カード同士の間隔 */
+}
+
+/* ==========================================
+   ランキングカード（各商品枠）
+   ========================================== */
+section {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* カード立体感用の影 */
+    display: flex;
+    align-items: center; /* 要素を上下中央揃え */
+    padding: 1rem;
+    gap: 1.5rem; /* バッジ・画像・テキスト間の余白 */
+    position: relative;
+}
+
+/* 順位バッジの基本スタイル */
+.rank-badge {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    min-width: 50px;
+    text-align: center;
+    flex-shrink: 0; /* 幅が縮まないように固定 */
+}
+
+/* --- 上位3位のバッジ色個別調整 --- */
+section:nth-child(1) .rank-badge {
+    background-color: #e6b422; /* 1位：ゴールド */
+}
+
+section:nth-child(2) .rank-badge {
+    background-color: #a8a8a8; /* 2位：シルバー */
+}
+
+section:nth-child(3) .rank-badge {
+    background-color: #c47037; /* 3位：ブロンズ */
+}
+
+/* 商品画像 */
+.item-image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover; /* 画像の縦横比を崩さず枠内に収める */
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* 商品テキストエリア（タイトル＋説明） */
+.item-info {
+    flex-grow: 1; /* 余ったスペースを自動で埋める */
+}
+
+.item-info h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.item-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+   /* フッター（ページ最下部） */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #888;
+    font-size: 0.85rem;
+    border-top: 1px solid #eee;
+}
