@@ -9,11 +9,6 @@ header{
     position:sticky;
     top: 0;
     padding: 15px 40px;
-    /* display: flex; */
-    /* justify-content: space-around;  */
-    /* align-items: center; 
-    background-color: #FCA5A5;
-    border-bottom: 5px #6B6B69; */
 }
 
 nav{
@@ -22,12 +17,6 @@ nav{
     gap: 20px;                      
     max-width: 1000px;             
     margin: 0 auto;
-    /* display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center; */
 }
 
 nav a{
@@ -37,11 +26,6 @@ nav a{
     color: #8b4513;                 
     font-weight: bold;              
     font-size: 16px;
-    /* text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0 15px;
-    padding: 5px 10px; */
 }
 
 .main-title{
@@ -98,11 +82,6 @@ footer{
     text-align: center;
     background-color: #f2f2f2;
     color: #8b4513;
-    /* background-color: #FCA5A5;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
-    border: 5px #6B6B69; */
 }
 
 footer h1{
