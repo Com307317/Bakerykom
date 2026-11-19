@@ -11,7 +11,7 @@ body {
 }
 
 /* ヘッダー */
-body {
+body header {
     position: sticky;
     top: 0;
     z-index: 100;
@@ -22,25 +22,15 @@ body {
     border-bottom: 3px solid #6b6b69;
 }
 
-header {
-    padding: 20px 40px;
-}
-
-.menu1 {
+header div {
     display: flex;
-    justify-content: space-between; 
-    gap: 20px;                      
-    max-width: 1000px;             
-    margin: 0 auto;                 
+    gap: 20px;
 }
 
-.menu1 a {
-    flex: 1;                        
-    text-align: center;             
-    text-decoration: none;          
-    color: #8b4513;                 
-    font-weight: bold;              
-    font-size: 16px;           
+header div a {
+    text-decoration: none;
+    color: #8b4513;
+    font-weight: bold;
 }
 
 section {
