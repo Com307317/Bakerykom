@@ -33,9 +33,9 @@ header div a {
     font-weight: bold;
 }
 
-
 section {
     position: relative;
+    margin-top: 40px;
 }
 
 section img {
