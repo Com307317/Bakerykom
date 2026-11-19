@@ -178,3 +178,52 @@ header {
     margin-bottom: 8px;
     line-height: 1.6;
 }
+
+
+
+#Top .outline-text,
+#Top .ranking-text,
+#Top .todaysbread-text {
+    flex: 1;
+}
+
+#Top .outline-text h2,
+#Top .ranking-text h2,
+#Top .todaysbread-text h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+#Top .outline-text p,
+#Top .ranking-text p,
+#Top .todaysbread-text p {
+    line-height: 2;
+    margin: 0 0 24px 0;
+}
+
+#Top .outline-content img,
+#Top .ranking-content img,
+#Top .todaysbread-content img {
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#Top .ranking-btn,
+#Top .todaysbread-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #8b4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#Top .ranking-btn:hover,
+#Top .todaysbread-btn:hover {
+    opacity: 0.8;
+}
+
+
