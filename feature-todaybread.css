@@ -12,25 +12,24 @@ body {
 
 /* ヘッダー */
 body header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 3px solid #6b6b69;
+    padding: 20px 40px;
 }
 
 header div {
     display: flex;
-    gap: 20px;
+    justify-content: space-between; 
+    gap: 20px;                      
+    max-width: 1000px;             
+    margin: 0 auto;
 }
 
 header div a {
-    text-decoration: none;
-    color: #8b4513;
-    font-weight: bold;
+    flex: 1;                        
+    text-align: center;             
+    text-decoration: none;          
+    color: #8b4513;                 
+    font-weight: bold;              
+    font-size: 16px;
 }
 
 section {
