@@ -272,3 +272,14 @@ header {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+footer {
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #8b4513;
+}
+
+.midashi-footer{
+    padding: 20px 40px;
+    font-size: 40px;
+    font-weight: bold;
+}
