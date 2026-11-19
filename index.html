@@ -3,50 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://jsdelivr.net">
     <title>TamuraBakery</title>
 </head>
-<header><a href="index.html">ホーム</a><a href="">店の歩み</a><a href="">ランキング</a><a href="">今日のパン
-</a><a href="">アクセス</a></header>
-<body id="Top">
+<header>    
+    <div class="menu1">
+        <a href="index.html">トップページ</a>
+        <a href="">アクセス</a>
+        <a href="">ランキング</a>
+        <a href="">今日のパン</a>
+        <a href="">店の歩み</a>
+    </div>
+</header><body id="Top">
     <section class="Top">
         <div class="slider">
-            <img src="" alt="pan1">
-            <img src="" alt="pan2">
-            <img src="" alt="pna3">
+            <div class="slides">
+            <img src="picture/フランスぱん.jpg" alt="pan1" class="slide active">
+            <img src="picture/カレー.jpg" alt="pan2" class="slide">
+            <img src="picture/わっさん.jpg" alt="pan3" class="slide">
         </div>
-        <h2>今までにないパンを世界へ</h2>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
     </section>
+        <h1 class="thema">今までにないパンを世界へ</h1>
         
     <section class="outline">
-        <h2>進化し続けるおいしさ</h2>
-        <div>
-            <span> 私たちTamuraBakeryは、パンの新しい可能性を追い求めるベーカリーです。
-                これまでのパンのおいしさを大切にしながら、素材の組み合わせや製法に工夫を重ね、
-                今までにない味わいや食感を生み出すことに挑戦しています。
-                まだ始まったばかりのお店だからこそ、固定観念にとらわれず、
-                一つひとつのパンに新しい発見と驚きを込めて。
-                これからも進化し続けるおいしさを、皆さまにお届けします。
-            </span>
-            <img src="" alt="パン画像">
+        <div class="outline-content">
+            <div class="outline-text">
+                <h2>進化し続けるおいしさ</h2>
+                <p>
+                    私たちTamuraBakeryは、パンの新しい可能性を追い求めるベーカリーです。
+                    これまでのパンのおいしさを大切にしながら、素材の組み合わせや製法に工夫を重ね、
+                    今までにない味わいや食感を生み出すことに挑戦しています。
+                    まだ始まったばかりのお店だからこそ、固定観念にとらわれず、
+                    一つひとつのパンに新しい発見と驚きを込めて。
+                    これからも進化し続けるおいしさを、皆さまにお届けします。
+                </p>
+            </div>
+            <img src="picture/メロン.jpg" alt="パン画像">
         </div>
     </section>
 
     <section class="ranking">
-    <div>
-        <img src="" alt="">
-        <span></span>
-    </div>
-    <a href="">ランキングへ</a>
+        <div class="ranking-content">
+            <img src="picture/アンパンマン.jpg" alt="">
+            <div class="ranking-text">
+                <h2>人気パンランキング</h2>
+                <p>定番から新作まで、毎日更新！！</p>
+                <p>店員絶賛の本日のパンランキング</p>
+                <a href="">ランキングへ</a>
+            </div>
+        </div>
     </section>
 
     <section class="todaysbread">
-        <a href="">本日の一押しメニュー</a>
+        <div class="todaysbread-content">
+            <div class="todaysbread-text">
+                <h2>店長一押し、本日のすゝめ</h2>
+                <p>定番から新作まで！！</p>
+                <p>季節限定のパンも！！</p>
+                <a href="">本日の一押しパン</a>
+            </div>
+            <img src="picture/パン一覧.jpg" alt="">
+        </div>
     </section>
 
     <section class="access">
-        <div></div>
-        <span></span>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.6690777366935!2d141.141418805429!3d39.704871467591325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f857630971ceb65%3A0xa71278d9c8f84080!2zTUNM55ub5bKh5oOF5aCx44OT44K444ON44K577yG44OH44K244Kk44Oz5bCC6ZaA5a2m5qChIOODh-OCtuOCpOODs-aDheWgsemkqA!5e1!3m2!1sja!2sjp!4v1791860064996!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="info">
+            <h2>店舗アクセス</h2>
+            <p class="address">
+                〒020-0021<br>
+            岩手県盛岡市中央通3丁目2-17
+            </p>
+            <p>営業時間: 9:30 ~ 15:10</p>
+            <p>定休日:第１・３水曜日</p>
+            <p>お問い合わせ</p>
+            <p>000-000-0000</p>
+        </div>
     </section>
+
+
+<!-- スライダーのスクリプト -->
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    let slideInterval;
+
+    function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    if (index >= slides.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = slides.length - 1;
+    } else {
+        currentIndex = index;
+    }
+    
+    slides[currentIndex].classList.add('active');
+    }
+
+    function changeSlide(step) {
+    showSlide(currentIndex + step);
+    resetTimer();
+    }
+
+    function startTimer() {
+    slideInterval = setInterval(() => {
+        showSlide(currentIndex + 1);
+    }, 4000);
+    }
+
+    function resetTimer() {
+    clearInterval(slideInterval);
+    startTimer();
+    }
+
+    startTimer();
+</script>
+
+    
 </body>
 <footer></footer>
 </html>
