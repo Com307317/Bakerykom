@@ -43,3 +43,19 @@ nav a{
     font-weight: bold;
     margin-bottom: 25px;
 }
+
+
+
+
+
+footer{
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #8b4513;
+}
+
+footer h1{
+   padding: 20px 40px;
+    font-size: 40px;
+    font-weight: bold;
+}
