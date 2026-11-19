@@ -9,28 +9,23 @@ header{
     position:sticky;
     top: 0;
     padding: 15px 40px;
-    display: flex;
-    justify-content: space-around; 
-    align-items: center; 
-    background-color: #FCA5A5;
-    border-bottom: 5px #6B6B69;
 }
 
 nav{
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1000px;
+    justify-content: space-between; 
+    gap: 20px;                      
+    max-width: 1000px;             
     margin: 0 auto;
-    text-align: center;
 }
 
 nav a{
-    text-decoration: none;
+    flex: 1;                        
+    text-align: center;             
+    text-decoration: none;          
+    color: #8b4513;                 
+    font-weight: bold;              
     font-size: 16px;
-    font-weight: bold;
-    margin: 0 15px;
-    padding: 5px 10px;
 }
 
 .main-title{
@@ -38,6 +33,7 @@ nav a{
 }
 
 .main-title h1{
+    color: #8b4513;
     margin-top: 30px;
     margin-bottom: 5px;
 }
@@ -45,21 +41,29 @@ nav a{
 .main-title p{
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .container{
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    text-align: left;
+    text-align: center;
+    display: block;
 }
 
-.container h3{
+.info h3{
+    color: #8b4513;
     font-size: 28px;
     padding: 5px 0 10px 5px;
     margin-top: 30px;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.info{
+    text-align: left;
+    display: inline-block;
 }
 
 img{
@@ -70,15 +74,19 @@ img{
     display: block;
 }
 
+.pay{
+    text-align: left;
+}
+
 footer{
-    background-color: #FCA5A5;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
-    border: 5px #6B6B69;
+    background-color: #f2f2f2;
+    color: #8b4513;
 }
 
 footer h1{
+   padding: 20px 40px;
     font-size: 40px;
+    font-weight: bold;
 }
 
