@@ -30,6 +30,7 @@ nav a{
 
 .main-title{
     text-align: center;
+    font-size: 1.2rem;
 }
 
 .main-title h1{
@@ -44,8 +45,42 @@ nav a{
     margin-bottom: 25px;
 }
 
+.container{
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    display: block;
+}
 
+.recruit{
+    text-align: left;
+    display: inline-block;
+}
 
+.recruit h2{
+    color: #8b4513;
+    font-size: 28px;
+    padding: 5px 0 10px 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.message h2{
+    color: #8b4513;
+    font-size: 28px;
+    padding: 5px 0 10px 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.staff-voice{
+    text-align: left;
+    display: inline-block;
+}
 
 
 footer{
