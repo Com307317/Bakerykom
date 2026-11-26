@@ -105,3 +105,11 @@ strong {
     margin-top: 40px;
     text-align: left;
 }
+
+.story-info h3 {
+    color: #8b4513;
+    font-size: 20px;
+    border-left: 4px solid #8b4513;
+    padding-left: 12px;
+    margin-bottom: 16px;
+}
