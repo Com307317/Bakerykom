@@ -21,21 +21,86 @@ body {
     line-height: 1.6;
 }
 
-/* ==========================================
-   ヘッダー（ページ上部）
-   ========================================== */
-header {
-    background-color: var(--primary-color);
-    color: #fff;
-    text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 下部にうっすら影を付ける */
+/* ヘッダー（ページ上部） */
+/* header {
+    position: sticky;
+    top: 0;
+    z-index: 100;                      /* スクロール時も他の要素より前面に表示 */
+    /* min-height: 160px; */
+    /* padding: 1rem 40px; */
+    /* display: flex; */
+    /* flex-direction: column;            タイトルとナビを縦に並べる */
+    /* justify-content: center; */ 
+    /* align-items: flex-start;           文字は左側に寄せる（右側はパンの画像） */
+    /* gap: 0.5rem; */
+
+    /* 背景画像の設定 */
+    /* background-color: #fca5a5;         画像が読み込めない時の予備色 */
+    /* background-image: url("images/header.jpg"); */
+    /* background-size: cover;            ヘッダー全体を画像で埋める */
+    /* background-position: right center; パンが見えるよう右側を基準にする */
+    /* background-repeat: no-repeat;
+
+    color: var(--text-color);
+    border-bottom: 3px solid #6b6b69;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
     font-size: 1.8rem;
-    letter-spacing: 0.1em; /* 文字間隔を広げておしゃれに */
+    letter-spacing: 0.1em;
+} */
+
+/* ヘッダー内のナビゲーション */
+/* header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: var(--accent-color);
+} */
+
+header {
+    padding: 20px 40px;
+}
+
+.menu1 {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px;                      
+    max-width: 1000px;             
+    margin: 0 auto;                 
+}
+
+.menu1 a {
+    flex: 1;                        
+    text-align: center;             
+    text-decoration: none;          
+    color: #8b4513;                 
+    font-weight: bold;              
+    font-size: 16px;           
+}
+
+/* スマホ向け：文字とパンが重ならないよう調整 */
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 20px;
+        background-position: 75% center;
+    }
+    header h1 {
+        font-size: 1.4rem;
+    }
 }
 
 /* ==========================================
@@ -54,22 +119,21 @@ main {
     gap: 1.5rem; /* カード同士の間隔 */
 }
 
-/* ==========================================
-   ランキングカード（各商品枠）
-   ========================================== */
+/* ランキングカード（各商品枠）：縦に並べる */
 section {
     background-color: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* カード立体感用の影 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     display: flex;
-    align-items: center; /* 要素を上下中央揃え */
+    flex-direction: column;   /* 中の要素を上から下へ縦に並べる */
+    align-items: flex-start;  /* 左寄せ */
     padding: 1rem;
-    gap: 1.5rem; /* バッジ・画像・テキスト間の余白 */
+    gap: 1rem;                /* 順位・画像・説明の間の余白 */
     position: relative;
 }
 
-/* 順位バッジの基本スタイル */
+/* 順位バッジのスタイル */
 .rank-badge {
     background-color: var(--primary-color);
     color: #fff;
@@ -77,9 +141,11 @@ section {
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
     border-radius: 8px;
-    min-width: 50px;
-    text-align: center;
-    flex-shrink: 0; /* 幅が縮まないように固定 */
+    align-self: stretch;      /* 親（section）の幅いっぱいに広げる */
+    width: 100%;
+    box-sizing: border-box;   /* 余白を含めて幅を100%に収める */
+    text-align: left;         /* 文字は左揃え */
+    flex-shrink: 0;
 }
 
 /* --- 上位3位のバッジ色個別調整 --- */
@@ -97,11 +163,13 @@ section:nth-child(3) .rank-badge {
 
 /* 商品画像 */
 .item-image {
-    width: 140px;
-    height: 140px;
-    object-fit: cover; /* 画像の縦横比を崩さず枠内に収める */
+    display: block;           /* 画像を1つのブロックとして扱い、左右の余白で中央寄せできるようにする */
+    width: 100%;              /* 枠の幅いっぱいに広げる */
+    max-width: 600px;         /* 大きくしすぎないよう上限を付ける（数字は好みで変更可） */
+    height: 360px;            /* 高さを大きくして目立たせる */
+    margin: 0 auto;           /* 左右の余白を自動にして、中央に寄せる */
+    object-fit: contain;      /* 画像全体が見えるように収める（切れない） */
     border-radius: 8px;
-    flex-shrink: 0;
 }
 
 /* 商品テキストエリア（タイトル＋説明） */
@@ -122,10 +190,21 @@ section:nth-child(3) .rank-badge {
 }
 
    /* フッター（ページ最下部） */
-footer {
+/* footer {
     text-align: center;
     padding: 2rem 1rem;
     color: #888;
     font-size: 0.85rem;
     border-top: 1px solid #eee;
+} */
+footer {
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #8b4513;
+}
+
+.midashi-footer{
+    padding: 20px 40px;
+    font-size: 40px;
+    font-weight: bold;
 }
