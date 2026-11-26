@@ -51,8 +51,25 @@ footer {
 
 table {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 900px; 
+    margin: 20px auto;
+    border-collapse: collapse; 
+    border-color: #8b4513;
+}
+
+th {
+    padding: 16px;
+    text-align: left;
+}
+
+strong {
+    color: #5c3a21;
+}
+
+.year {
+    width: 220px;              
+    color: #8b4513;
+    text-align: center;
 }
 
 .history {
@@ -76,4 +93,23 @@ table {
     object-fit: cover;
     display: block;
     margin-bottom: 12px;
+}
+
+.story {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px 30px 60px 30px;
+}
+
+.story-info {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.story-info h3 {
+    color: #8b4513;
+    font-size: 20px;
+    border-left: 4px solid #8b4513;
+    padding-left: 12px;
+    margin-bottom: 16px;
 }
